@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loja</title>
+<script src="script.js"></script>
+    <link rel="icon" href="https://a.imagem.app/bPjJzt.png" type="image/x-icon">
+<style>
+.secondary-navbar {
+      background-color: rgb(156 163 175);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      color: white;
+      position: fixed;
+      width: 100%;
+      top: 70px; /* Deve coincidir com o espaço de preenchimento da barra de navegação principal */
+      z-index: 999; /* Coloca a barra secundária acima do conteúdo */
+    }
+
+    .secondary-navbar-content {
+      display: center;
+      align-items: center;
+    }
+
+    .secondary-navbar-text {
+      font-size: 1.0rem;
+      margin-right: 10px;
+      animation: blink 3s infinite; /* Aplica a animação de piscar ao texto */
+    }
+
+    .secondary-navbar-image {
+      max-width: 50px;
+      height: auto;
+    }
+
+    @keyframes blink {
+      0%, 50%, 100% {
+        opacity: 1;
+      }
+      25%, 75% {
+        opacity: 0;
+      }
+    }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 100px; /* Espaço de preenchimento para a barra de navegação */
+  }
+  .navbar {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza os itens na barra */
+    padding: 10px;
+    color: white;
+    position: fixed; /* Fixa a barra de navegação no topo */
+    width: 100%; /* Faz a barra de navegação ocupar a largura total */
+    top: 0; /* Posiciona a barra no topo */
+    z-index: 1000; /* Coloca a barra de navegação acima do conteúdo */
+  }
+  .logo {
+    max-width: 40px; /* Defina o tamanho da logo */
+    height: auto;
+    margin-right: 20px; /* Adicione um espaçamento entre a logo e o nome */
+  }
+  .navbar-title {
+    font-size: 1.5rem; /* Tamanho do nome da loja */
+    font-weight: bold;
+  }
+  .small-logo {
+    max-width: 50px;
+    height: auto;
+  }
+  .products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  .product {
+    flex: 0 0 calc(25% - 20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .product img {
+    max-width: 150%;
+    height: 165px;
+    object-fit: cover;
+  }
+  .product-title {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  .product-price {
+    color: green;
+    margin-top: 5px;
+  }
+  .buy-button {
+    margin-top: 10px;
+    background-color: green;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* Estilos padrão para dispositivos maiores */
+  .product {
+    flex: 0 0 calc(15% - 15px);
+  }
+
+  /* Estilos para dispositivos menores, como celulares */
+  @media (max-width: 768px) {
+    .product {
+      flex: 0 0 calc(25% - 1px); /* Mostra 2 produtos por linha */
+    }
+    
+</style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">
+      <a href="#">
+        <img src="https://a.imagem.app/bPjJzt.png" alt="Assistência Técnica" class="small-logo">
+      </a>
+    </div>
+    <div class="navbar-title">Assistência Técnica Loja</div>
+    <div class="logo">
+      <a href="#">
+        <img src="https://a.imagem.app/bPjnzk.png" alt="" class="small-logo">
+      </a>
+    </div>
+  </div>
+  
+  <div class="secondary-navbar"> <!-- Nova barra secundária -->
+  <div class="secondary-navbar-content">
+    <div class="secondary-navbar-text" style="color: rgb(255 250 205);">TODOS OS PEDIDOS SÃO FEITOS VIA WHATSAPP COM O VENDEDOR / ENTREGA A COMBINAR</div>
+
+    
+  </div>
+</div>
+
+   <div class="products-container">
+    <div class="product">
+      <img src="https://a.imagem.app/bPqU1C.png" alt="Produto 2">
+      <div class="product-title">SmartWatch IWO 16 Ultra Watch 8 2023 49mm</div>
+      <div class="product-price">R$ 239,99</div>
+      <button class="buy-button" onclick="window.location.href='https://api.whatsapp.com/send?phone=+5585997980073'">Comprar</button>
+    </div>
+
+    <div class="product">
+      <img src="https://a.imagem.app/bUBqV8.jpeg" alt="Produto 2">
+      <div class="product-title">Relógio inteligente V30 1,69" Bluetooth 5.0 a prova d'agua Smartwatch SH-V30</div>
+      <div class="product-price">R$ 199,99</div>
+      <button class="buy-button" onclick="window.location.href='https://api.whatsapp.com/send?phone=+5585997980073'">Comprar</button>
+    </div>
+    
+
+    <div class="product">
+      <img src="https://a.imagem.app/bUBjGE.jpeg" alt="Produto 2">
+      <div class="product-title">Xiaomi Smartphone Redmi 9A 32 GB, 2 GB RAM, 6.53 LCD, Sky Blue - AzulXiaomi Smartphone Redmi 9A 32 GB, 2 GB RAM, 6.53 LCD, </div>
+      <div class="product-price">R$ 779,99</div>
+      <button class="buy-button" onclick="window.location.href='https://api.whatsapp.com/send?phone=+5585997980073'">Comprar</button>
+    </div>
+
+    <div class="product">
+      <img src="https://a.imagem.app/bUBlxe.png" alt="Produto 2">
+      <div class="product-title">Smartphone Samsung Galaxy A04e 64GB Azul 4G Octa-Core 3GB RAM 6,5” Câm. Dupla + Selfie 5MP</div>
+      <div class="product-price">R$ 699,99</div>
+      <button class="buy-button" onclick="window.location.href='https://api.whatsapp.com/send?phone=+5585997980073'">Comprar</button>
+    </div>
+    
+    
+
+    <div class="product">
+      <img src="https://a.imagem.app/bUBc8C.jpeg" alt="Produto 2">
+      <div class="product-title">Xiaomi MI 12 Lite 5g 128gb/8gb 6 Meses De Garantia</div>
+      <div class="product-price">R$ 2,000</div>
+      <button class="buy-button" onclick="window.location.href='https://api.whatsapp.com/send?phone=+5585997980073'">Comprar</button>
+    </div>
+    
+    
+
+    <div class="product">
+      <img src="https://a.imagem.app/bUBrsY.jpeg" alt="Produto 2">
+      <div class="product-title">Smartphone Realme C55 256/8Gb Ram</div>
+      <div class="product-price">R$ 1,350</div>
+      <button class="buy-button" onclick="window.location.href='https://api.whatsapp.com/send?phone=+5585997980073'">Comprar</button>
+    </div>
+    
+    
+
+    <div class="product">
+      <img src="https://a.imagem.app/bUBvt1.jpeg" alt="Produto 2">
+      <div class="product-title">Comprar Apple iPhone 7 Plus 128GB Tela 5.5 Cam 12+12MP/7MP Ios Red - Swap</div>
+      <div class="product-price">R$ 1,500</div>
+      <button class="buy-button" onclick="window.location.href='https://api.whatsapp.com/send?phone=+5585997980073'">Comprar</button>
+    </div>
+    
+    
+
+    <div class="product">
+      <img src="https://a.imagem.app/bUB47t.jpeg" alt="Produto 2">
+      <div class="product-title">Celular Xiaomi Redmi 12C 3GB de RAM / 64GB / Tela 6.71''/ Dual Sim LTE - Graphit</div>
+      <div class="product-price">R$ 799,99</div>
+      <button class="buy-button" onclick="window.location.href='https://api.whatsapp.com/send?phone=+5585997980073'">Comprar</button>
+    </div>
+    
+    
+
+    <div class="product">
+      <img src="https://a.imagem.app/bUBP90.jpeg" alt="Produto 2">
+      <div class="product-title">Realme C21Y-Smartphone 6.5”,5000mAH,4+64g,13MP AI Triple Camera,3-Card Slot,</div>
+      <div class="product-price">R$ 850</div>
+      <button class="buy-button" onclick="window.location.href='https://api.whatsapp.com/send?phone=+5585997980073'">Comprar</button>
+    </div>
+    
+    
+
+    <div class="product">
+      <img src="https://a.imagem.app/bUBDZP.jpeg" alt="Produto 2">
+      <div class="product-title">
+Xiaomi Redmi Note 11 Graphite Gray 6GB Ram 128GB Rom</div>
+      <div class="product-price">R$ 1,600</div>
+      <button class="buy-button" onclick="window.location.href='https://api.whatsapp.com/send?phone=85997980073'">Comprar</button>
+    </div>
+    
+    
+
+    <div class="product">
+      <img src="https://a.imagem.app/bUG34i.jpeg" alt="Produto 2">
+      <div class="product-title">BLU B92 128GB Azul Claro com Tela 6.50 e Câmera Quádrupla de 16MP</div>
+      <div class="product-price">R$ 750</div>
+      <button class="buy-button" onclick="window.location.href='https://api.whatsapp.com/send?phone=+5585997980073'">Comprar</button>
+    </div>
+    
+    
+
+    <div class="product">
+      <img src="https://a.imagem.app/bUGHTE.jpeg" alt="Produto 2">
+      <div class="product-title">Blu G60 Dual Sim 64 Gb Gradient Blue 3 Gb Ram</div>
+      <div class="product-price">R$ 650</div>
+      <button class="buy-button" onclick="window.location.href='https://api.whatsapp.com/send?phone=+5585997980073'">Comprar</button>
+    </div>
+    
+    
+
+    <div class="product">
+      <img src="https://a.imagem.app/bUGSde.jpeg" alt="Produto 2">
+      <div class="product-title">Smartphone Multilaser G Max 2 128GB Preto Tela 6.5” Câmera Tripla 13MP 4GB RAM</div>
+      <div class="product-price">R$ 750</div>
+      <button class="buy-button" onclick="window.location.href='https://api.whatsapp.com/send?phone=+5585997980073'">Comprar</button>
+    </div>
+    
+    
+
+    <div class="product">
+      <img src="https://a.imagem.app/bUG7Da.jpeg" alt="Produto 2">
+      <div class="product-title">Xiaomi Redmi Note 10S 6GB RAM 128GB ROM COSMIC PURPLE VERSÃO GLOBAL FABRICADO ÍNDIA</div>
+      <div class="product-price">R$ 1,300</div>
+      <button class="buy-button" onclick="window.location.href='https://api.whatsapp.com/send?phone=+5585997980073'">Comprar</button>
+    </div>
+    
+    
+
+    <div class="product">
+      <img src="https://a.imagem.app/bUG2uY.jpeg" alt="Produto 2">
+      <div class="product-title">
+Smartphone Xiaomi Mi 8 Lite 64GB 4GB RAM Azul</div>
+      <div class="product-price">R$ 850</div>
+      <button class="buy-button" onclick="window.location.href='https://api.whatsapp.com/send?phone=+5585997980073'">Comprar</button>
+    </div>
+    
+    
+
+    <div class="product">
+      <img src="https://a.imagem.app/bUGcqr.jpeg" alt="Produto 2">
+      <div class="product-title">Carregador tipo C COMPLETO</div>
+      <div class="product-price">R$ 32</div>
+      <button class="buy-button" onclick="window.location.href='https://api.whatsapp.com/send?phone=+5585997980073'">Comprar</button>
+    </div>
+    
+    <div class="product">
+      <img src="https://a.imagem.app/bUGrm2.jpeg" alt="Produto 2">
+      <div class="product-title">Carregador v8 COMPLETO</div>
+      <div class="product-price">R$ 32</div>
+      <button class="buy-button" onclick="window.location.href='https://api.whatsapp.com/send?phone=+5585997980073'">Comprar</button>
+    </div>
+    
+    <div class="product">
+      <img src="https://a.imagem.app/bUHoOQ.png" alt="Produto 2">
+      <div class="product-title">Fone de ouvido Esterio modelo LE-0210</div>
+      <div class="product-price">R$ 28</div>
+      <button class="buy-button" onclick="window.location.href='https://api.whatsapp.com/send?phone=+5585997980073'">Comprar</button>
+    </div>
+    
+    <div class="product">
+      <img src="https://a.imagem.app/bUHB01.jpeg" alt="Produto 2">
+      <div class="product-title">Cabo para iphone IOS</div>
+      <div class="product-price">R$ 18</div>
+      <button class="buy-button" onclick="window.location.href='https://api.whatsapp.com/send?phone=+5585997980073'">Comprar</button>
+    </div>
+    
+    <div class="product">
+      <img src="https://a.imagem.app/bUh6m8.jpeg" alt="Produto 2">
+      <div class="product-title">Cabeça FONTE usb power adaptador modelo LE-356</div>
+      <div class="product-price">R$ 18</div>
+      <button class="buy-button" onclick="window.location.href='https://api.whatsapp.com/send?phone=+5585997980073'">Comprar</button>
+    </div>
+    
+    <div class="product">
+      <img src="https://a.imagem.app/bUhX6e.jpeg" alt="Produto 2">
+      <div class="product-title">fonte tipo C USB para iphone adapetador modelo LE-357</div>
+      <div class="product-price">R$ 32</div>
+      <button class="buy-button" onclick="window.location.href='https://api.whatsapp.com/send?phone=+5585997980073'">Comprar</button>
+    </div>
+    
+    <div class="product">
+      <img src="https://a.imagem.app/bUhJnY.jpeg" alt="Produto 2">
+      <div class="product-title">Cabo usb para carregador de 2 metros para iphone ios  </div>
+      <div class="product-price">R$ 18</div>
+      <button class="buy-button" onclick="window.location.href='https://api.whatsapp.com/send?phone=+5585997980073'">Comprar</button>
+    </div>
+    
+    <div class="product">
+      <img src="https://a.imagem.app/bUh9hk.jpeg" alt="Produto 2">
+      <div class="product-title">Cabo usb para carregador de 2 metros TIPO C</div>
+      <div class="product-price">R$ 18</div>
+      <button class="buy-button" onclick="window.location.href='https://api.whatsapp.com/send?phone=+5585997980073'">Comprar</button>
+    </div>
+    
+        <div class="product">
+      <img src="https://a.imagem.app/bUhCoG.jpeg" alt="Produto 2">
+      <div class="product-title">cabo tipo C USB MODELO LE-13MIRCO</div>
+      <div class="product-price">R$ 18</div>
+      <button class="buy-button" onclick="window.location.href='https://api.whatsapp.com/send?phone=+5585997980073'">Comprar</button>
+    </div>
+    
+        <div class="product">
+      <img src="https://a.imagem.app/bUhtEX.jpeg" alt="Produto 2">
+      <div class="product-title">fones de ouvido modelo le-842</div>
+      <button class="buy-button" onclick="window.location.href='https://api.whatsapp.com/send?phone=+5585997980073'">Comprar</button>
+    </div>
+    
+        <div class="product">
+      <img src="https://a.imagem.app/bUhtEX.jpeg" alt="Produto 2">
+      <div class="product-title">fones de ouvidor modelo le-844</div>
+      <div class="product-price">R$ 15</div>
+      <button class="buy-button" onclick="window.location.href='https://api.whatsapp.com/send?phone=+5585997980073'">Comprar</button>
+    </div>
+    
+        <div class="product">
+      <img src="https://a.imagem.app/bUhInQ.jpeg" alt="Produto 2">
+      <div class="product-title">fones de ouvidor Esterio ka-716</div>
+      <div class="product-price">R$ 15</div>
+      <button class="buy-button" onclick="window.location.href='https://api.whatsapp.com/send?phone=+5585997980073'">Comprar</button>
+    </div>
+    
+        <div class="product">
+      <img src="https://a.imagem.app/bUhQr1.jpeg" alt="Produto 2">
+      <div class="product-title">Cabo usb tipo V8 35W</div>
+      <div class="product-price">R$ 15</div>
+      <button class="buy-button" onclick="window.location.href='https://api.whatsapp.com/send?phone=+5585997980073'">Comprar</button>
+    </div>
+    
+        <div class="product">
+      <img src="https://a.imagem.app/bUhRPW.jpeg" alt="Produto 2">
+      <div class="product-title">Cabo usb TIPO C</div>
+      <div class="product-price">R$ 15</div>
+      <button class="buy-button" onclick="window.location.href='https://api.whatsapp.com/send?phone=+5585997980073'">Comprar</button>
+    </div>
+    
+         <div class="product">
+      <img src="https://a.imagem.app/bUhMor.jpeg" alt="Produto 2">
+      <div class="product-title">Cabo usb IPHONE IOS</div>
+      <div class="product-price">R$ 16,50</div>
+      <button class="buy-button" onclick="window.location.href='https://api.whatsapp.com/send?phone=+5585997980073'">Comprar</button>
+    </div>
+    
+         <div class="product">
+      <img src="https://a.imagem.app/bUh4EP.jpeg" alt="Produto 2">
+      <div class="product-title">Cabo usb TIPO V8</div>
+      <div class="product-price">R$ 16,50</div>
+      <button class="buy-button" onclick="window.location.href='https://api.whatsapp.com/send?phone=+5585997980073'">Comprar</button>
+    </div>
+    
+             <div class="product">
+      <img src="https://a.imagem.app/bUkB0C.jpeg" alt="Produto 2">
+      <div class="product-title">FONTE UNIVERSAL PARA BATERIA MODELO KTS-W009</div>
+      <div class="product-price">R$ 25</div>
+      <button class="buy-button" onclick="window.location.href='https://api.whatsapp.com/send?phone=+5585997980073'">Comprar</button>
+    </div>
+    
+</div>
+<footer>
+  <div class="footer">
+    <a href="https://testetesteerro004.000webhostapp.com/index.html" style="position: relative; display: inline-block;">
+      <img src="https://images.tcdn.com.br/img/editor/up/732240/formasdepagamentocartoes.png" alt="Logo" class="footer-logo" style="max-width: 150px;">
+      <p style="position: absolute; font-size: 12px; top: 0; left: 100%; margin-left: 15px;">Formas de Pagamentos</p>
+    </a>
+    <p style="font-size: 17px;">© 2023 assistencia tecnica jp e loja. Todos os direitos reservados.</p>
+    <p style="font-size: 12px;">ENDEREÇO: <span id="endereco">Rodovia Raimundo Pessoa de Araujo,221 - Mirambé - Caucaia</span></p>
+    <p style="font-size: 12px;">PONTO DE REFERENCIA: <span id="endereco">Final da Linha do onibus Taquara/Fortaleza</span></p>
+  </div>
+</footer>
+</body>
+</html>
